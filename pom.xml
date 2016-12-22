@@ -11,6 +11,16 @@
         <module>taotao-common</module>
         <module>taotao-manager</module>
     </modules>
+    <!--
+        使用maven进行模块划分管理，一般都会有一个父级项目，pom文件除了GAV(groupId, artifactId, version)是必须要配置的，
+        另一个重要的属性就是packing打包类型，所有的父级项目的packing都为pom，packing默认是jar类型，如果不作配置，maven会
+        将该项目打成jar包。作为父级项目，还有一个重要的属性，那就是modules，通过modules标签将项目的所有子项目引用进来，
+        在build父级项目时，会根据子模块的相互依赖关系整理一个build顺序，然后依次build。
+        而对于各个子项目，需要在其对应的pom文件开头申明对父级项目的引用，通过GAV实现。对于子项目自己的GAV配置，GV如果
+        不配置，则会从父级项目的配置继承过来。子模块可通过dependencies标签来添加自己的依赖，此外子类项目的packing值只能
+        是war或者jar，前面已经说过，packing默认是jar类型。如果是需要部署的项目，则需要打包成war类型，如果只是内部调用或
+        者是作服务使用，则推荐打包成jar类型。
+    -->
     <packaging>pom</packaging>
     <!--集中定义版本号-->
     <properties>

@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.taotao</groupId>
     <artifactId>taotao-manager</artifactId>
     <packaging>pom</packaging>
     <modules>
@@ -19,5 +18,11 @@
         <module>taotao-manager-web</module>
     </modules>
 
-
+    <!-- 依赖管理 -->
+    <dependencies>
+        <dependency>
+            <groupId>com.taotao</groupId>
+            <artifactId>taotao-common</artifactId>
+        </dependency>
+    </dependencies>
 </project>
