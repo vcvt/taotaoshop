@@ -7,6 +7,10 @@
     <groupId>com.taotao</groupId>
     <artifactId>taotao-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>taotao-common</module>
+        <module>taotao-manager</module>
+    </modules>
     <packaging>pom</packaging>
     <!--集中定义版本号-->
     <properties>
@@ -34,7 +38,7 @@
         <jedis.version>2.9.2</jedis.version>
         <solrj.version>6.1.0</solrj.version>
     </properties>
-    <!--只是定义版本不是依赖-->
+    <!--只定义依赖版本，并不实际依赖-->
     <dependencyManagement>
         <dependencies>
             <!--时间操作组件-->
