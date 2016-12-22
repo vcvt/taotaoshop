@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.taotao</groupId>
     <artifactId>taotao-manager-web</artifactId>
+    <packaging>war</packaging>
 
 
 </project>

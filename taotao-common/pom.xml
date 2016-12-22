@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.taotao</groupId>
     <artifactId>taotao-common</artifactId>
+    <packaging>jar</packaging>
 
     <!-- jar包的依赖 -->
     <!--不需要添加版本，从父类加载版本-->
