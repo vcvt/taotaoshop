@@ -40,7 +40,7 @@
         <jsp-api.version>2.2</jsp-api.version>
         <joda-time.version>2.9.4</joda-time.version>
         <commons-lang3.version>3.4</commons-lang3.version>
-        <commons-io.version>2.1</commons-io.version>
+        <commons-io.version>2.4</commons-io.version>
         <commons-net.version>3.5</commons-net.version>
         <pagehelper.version>4.1.6</pagehelper.version>
         <jsqlparser.version>0.9.5</jsqlparser.version>
@@ -64,7 +64,7 @@
                 <version>${commons-lang3.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.commons</groupId>
+                <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
@@ -164,12 +164,12 @@
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
+                <artifactId>javax.servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>javax.servlet</groupId>
+                <groupId>javax.servlet.jsp</groupId>
                 <artifactId>jsp-api</artifactId>
                 <version>${jsp-api.version}</version>
                 <scope>provided</scope>
