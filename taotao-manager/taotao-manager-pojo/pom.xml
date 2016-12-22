@@ -12,5 +12,4 @@
     <artifactId>taobao-manager-pojo</artifactId>
 
     <!--这个模块不依赖任何jar包-->
-
 </project>
