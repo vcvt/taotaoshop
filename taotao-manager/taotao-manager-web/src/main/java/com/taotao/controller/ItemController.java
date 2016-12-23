@@ -12,6 +12,7 @@ import javax.annotation.Resource;
 /**
  * Created by smmit on 2016-12-23.
  */
+/*把spring context包添加到taotao-manger-web依赖中去，不会包Controller异常*/
 @Controller
 public class ItemController {
     @Resource
