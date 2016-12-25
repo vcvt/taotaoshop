@@ -22,6 +22,8 @@
         <plugin interceptor="com.github.pagehelper.PageHelper">
             <!--设置数据库类型，支持Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->
             <property name="dialect" value="mysql"/>
+            <!--启用合理化，如果Pagenum < 1查询第一页，pagenum > 最后一页，查询最后一页，禁用则返回空-->
+            <property name="reasonable" value="true"/>
         </plugin>
     </plugins>
 </configuration>

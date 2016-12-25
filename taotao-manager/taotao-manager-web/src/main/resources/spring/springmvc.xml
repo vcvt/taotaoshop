@@ -13,8 +13,8 @@
         <property name="suffix" value=".jsp" />
     </bean>
     <!-- 资源映射 -->
-    <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
-    <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
 
     <!-- 定义文件上传解析器 -->
     <bean id="multipartResolver"
@@ -24,4 +24,29 @@
         <!-- 设定文件上传的最大值5MB，5*1024*1024 -->
         <property name="maxUploadSize" value="5242880"/>
     </bean>
+    <!-- 返回json  需要导入 jackson-annotations.jar,jackson-core.jar,jackson-databind.jar-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+         <property name="messageConverters">
+             <list>
+                 <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                     <property name="supportedMediaTypes">
+                         <list>
+                             <value>text/html; charset=UTF-8</value>
+                             <value>application/json;charset=UTF-8</value>
+                         </list>
+                     </property>
+                 </bean>
+                 <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                     <property name="supportedMediaTypes">
+                         <list>
+                             <value>text/html; charset=UTF-8</value>
+                             <value>application/json;charset=UTF-8</value>
+                         </list>
+                     </property>
+                 </bean>
+             </list>
+         </property>
+    </bean>
+
 </beans>
