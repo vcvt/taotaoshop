@@ -3,12 +3,13 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>淘淘商城后台管理系统</title>
+	<%--basePath="http://localhost:8080/taotao/"--%>
 	<base href=" <%=basePath%>">
+	<%--"./"表示同级目录--%>
 	<link rel="stylesheet" type="text/css" href="./js/jquery-easyui-1.5.1/themes/default/easyui.css" />
 	<link rel="stylesheet" type="text/css" href="./js/jquery-easyui-1.5.1/themes/icon.css" />
 	<link rel="stylesheet" type="text/css" href="./css/taotao.css" />
@@ -31,7 +32,6 @@
 	         		<li data-options="attributes:{'url':'item-add'}">新增商品</li>
 	         		<li data-options="attributes:{'url':'item-list'}">查询商品</li>
 	         		<li data-options="attributes:{'url':'item-param-list'}">规格参数</li>
-					<li data-options="attributes:{'url':'item-param-list'}"><%=basePath%></li>
 				</ul>
          	</li>
          	<li>
